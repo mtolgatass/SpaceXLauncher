@@ -10,10 +10,12 @@ import Apollo
 
 class ListViewModel {
     
+    //MARK: - Variables
     @Published var items = [LaunchViewModel]()
     
     private var queryOffset: Int = 0
     
+    //MARK: - Class Functions
     func fetchLaunchList() {
         Network.shared.apollo.fetch(query: LaunchesQuery(offset: queryOffset)) { [weak self] result in
             guard let self = self else { return }

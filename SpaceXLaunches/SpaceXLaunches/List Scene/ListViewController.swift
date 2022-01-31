@@ -10,6 +10,7 @@ import Combine
 
 final class ListViewController: UIViewController {
     
+    //MARK: - Variables
     private var bindings: Set<AnyCancellable> = .init()
     var viewModel: ListViewModel = ListViewModel()
     
@@ -36,6 +37,8 @@ final class ListViewController: UIViewController {
         return dataSource
     }()
     
+    //MARK: - Override Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -44,6 +47,8 @@ final class ListViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    //MARK: - Private Class Functions
     
     private func configureUI() {
         view.addSubview(tableView)
@@ -75,7 +80,7 @@ final class ListViewController: UIViewController {
         }.store(in: &bindings)
     }
 }
-
+//MARK: - UITableViewDelegate Extension
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = self.viewModel.items[indexPath.row]

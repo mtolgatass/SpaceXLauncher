@@ -8,13 +8,17 @@
 import Foundation
 
 class ShipsViewModel: Hashable {
+    
+    //MARK: - Variables
     private var id = UUID()
     var ships: Ships
     
+    //MARK: - Init Function
     init(ships: Ships) {
         self.ships = ships
     }
     
+    //MARK: - Hashable Conformance Functions
     func hash(into hasher: inout Hasher) {
       hasher.combine(id)
     }

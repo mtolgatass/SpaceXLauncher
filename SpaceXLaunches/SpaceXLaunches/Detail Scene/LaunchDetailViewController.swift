@@ -10,6 +10,7 @@ import Apollo
 
 class LaunchDetailViewController: UIViewController {
     
+    //MARK: - Variables
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
@@ -156,6 +157,7 @@ class LaunchDetailViewController: UIViewController {
         }
     }
     
+    //MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -163,6 +165,7 @@ class LaunchDetailViewController: UIViewController {
         addConstraints()
     }
     
+    //MARK: - Private Class Functions
     private func configureShipsSnapshot() {
         var snapshot = LaunchDetailSnapshot()
         snapshot.appendSections([.main])

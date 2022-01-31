@@ -9,6 +9,7 @@ import UIKit
 
 class ShipItemCell: UICollectionViewCell {
     
+    //MARK: - Variables
     private(set) lazy var shipNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -26,6 +27,7 @@ class ShipItemCell: UICollectionViewCell {
         return image
     }()
     
+    //MARK: - Override Functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .clear
