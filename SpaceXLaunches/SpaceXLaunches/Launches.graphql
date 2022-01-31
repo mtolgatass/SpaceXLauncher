@@ -1,0 +1,21 @@
+query Launches($offset: Int){
+  launchesPast(limit: 20, sort: "launch_date_local", order: "DESC", offset: $offset) {
+    mission_name
+    details
+    launch_date_local
+    launch_site {
+      site_name_long
+    }
+    links {
+      video_link
+    }
+    rocket {
+      rocket_name
+    }
+    ships {
+      name
+      home_port
+      image
+    }
+  }
+}

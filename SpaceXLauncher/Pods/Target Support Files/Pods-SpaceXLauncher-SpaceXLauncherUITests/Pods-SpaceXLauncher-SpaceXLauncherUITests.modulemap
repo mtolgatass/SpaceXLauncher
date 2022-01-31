@@ -1,6 +1,0 @@
-framework module Pods_SpaceXLauncher_SpaceXLauncherUITests {
-  umbrella header "Pods-SpaceXLauncher-SpaceXLauncherUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
