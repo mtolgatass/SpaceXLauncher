@@ -1,2 +1,2 @@
 # SpaceXLauncher
-SpaceXLauncher with Apollo.
+SpaceXLauncher with Apollo GraphQL.
